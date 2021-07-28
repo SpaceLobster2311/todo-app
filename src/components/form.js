@@ -1,8 +1,9 @@
 import React from 'react';
-
+import { Button, FormGroup, Elevation } from '@blueprintjs/core'
+import '../CSS/card.css'
 const Form = (props) =>{
   return(
-  <form onSubmit={props.handleSubmit}>
+  <form className="form" onSubmit={props.handleSubmit}>
 
   <h2>Add To Do Item</h2>
 
@@ -22,7 +23,7 @@ const Form = (props) =>{
   </label>
 
   <label>
-    <button type="submit">Add Item</button>
+    <Button  className='button' type="submit">Add Item</Button>
   </label>
 </form>
   )

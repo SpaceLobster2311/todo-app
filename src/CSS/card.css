@@ -1,0 +1,24 @@
+.list {
+  width: 500px;
+  color: #F5F8FA;
+  background-color: #F29D49;
+  font-size: large;
+}
+.header {
+  max-width: 1000px;
+  text-align: center;
+  margin-top: 50px;
+  margin: auto;
+  background-color: #F29D49;
+}
+
+.form {
+  max-width: 500px;
+  height: 150px;
+  background-color: #C23030;
+  color: #F5F8FA;
+  
+}
+.button {
+  background-color: aqua;
+}
