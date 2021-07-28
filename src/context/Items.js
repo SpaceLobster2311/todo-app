@@ -4,11 +4,11 @@ export const ItemContext = React.createContext();
 
 function ItemProvider(props){
 
-  const [complete, setComplete] = useState('incomplete');
-  const [itemNumber, setItemNumber] = useState(0);
-
+  const [hide, setHide] = useState(false);
+  const [itemNumber, setItemNumber] = useState(3);
+  const [sort, setSort] = useState('')
   return(
-    <ItemContext.Provider value={{complete: complete, itemNumber: itemNumber}}>
+    <ItemContext.Provider value={{hide, itemNumber, sort}}>
       {props.children}
     </ItemContext.Provider>
   )
