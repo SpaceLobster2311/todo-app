@@ -62,7 +62,7 @@ const ToDo = () => {
 
         <Header data={incomplete}/>
         <Form handleSubmit={handleSubmit} handleChange={handleChange}/>
-        <List toggleComplete={toggleComplete} list={list}/>
+        <List deleteItem={deleteItem} toggleComplete={toggleComplete} list={list}/>
 
 
 

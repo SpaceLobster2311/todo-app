@@ -36,7 +36,10 @@ const List = (props) => {
         <h3>{item.text}</h3>
         <p><large>Name: {item.assignee}</large></p>
         <p><medium>Difficulty: {item.difficulty}</medium></p>
-        <Button onClick={() => props.toggleComplete(item.id)}>Complete: {item.complete.toString()}</Button>
+        {(!item.complete)
+        ?<Button onClick={() => props.toggleComplete(item.id)}>Complete: {item.complete.toString()}</Button>
+        :<Button onClick={() => props.deleteItem(item.id)}> Delete: </Button>
+        }
         <hr />
       </Card>
     ))}
