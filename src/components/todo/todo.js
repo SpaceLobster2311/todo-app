@@ -5,6 +5,9 @@ import List from '../List.js';
 import { ItemContext } from '../../context/Items.js'
 import Header from '../Header.js';
 import { v4 as uuid } from 'uuid';
+import { ThemeContext } from '../../context/theme.js';
+import SettingsForm from '../switch.js';
+import '../../CSS/card.css'
 
 const ToDo = () => {
 
@@ -13,7 +16,7 @@ const ToDo = () => {
   const { handleChange, handleSubmit } = useForm(addItem);
 
   const itemEX = useContext(ItemContext);
-
+  const themeEX = useContext(ThemeContext)
   function addItem(item) {
     console.log(item);
     item.id = uuid();
@@ -58,15 +61,16 @@ const ToDo = () => {
 
 
   return (
-    <>
+    <div className={`${themeEX.mode}`}>
 
         <Header data={incomplete}/>
+        <SettingsForm />
         <Form handleSubmit={handleSubmit} handleChange={handleChange}/>
         <List deleteItem={deleteItem} toggleComplete={toggleComplete} list={list}/>
 
 
 
-    </>
+    </div>
   );
 };
 

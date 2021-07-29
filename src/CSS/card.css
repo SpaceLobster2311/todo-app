@@ -22,3 +22,12 @@
 .button {
   background-color: aqua;
 }
+.dark {
+  background-color: rgb(60, 59, 59);
+  color: white;
+}
+
+.light {
+  background-color: rgb(216, 216, 216);
+  color: black;
+}
